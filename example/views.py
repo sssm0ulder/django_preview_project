@@ -9,4 +9,4 @@ def person_list(request):
     if len(persons) == 0:
         add_fake_data_to_database()
 
-    return render(request, 'person_list.html', {'persons': persons})
+    return render(request, 'person_list.html', {'persons': persons[:5]})

@@ -6,11 +6,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/person_list.css' %}">
 </head>
 <body>
-    <h2>Список людей</h2>
-    <ul class="square">
+  <h2>Список владельцев компаний</h2>
+  <ol class="alternating-colors">
         {% for person in persons %}
-      <li><b>{{ person.first_name }} {{ person.last_name }}</b> ({{ person.age }} лет) - {{ person.company }}</li>
+        <li><strong>{{ person.first_name }} {{ person.last_name }}</strong> ({{ person.age }} лет)
+          <p>{{ person.company }}</p>
+        </li>
         {% endfor %}
-    </ul>
+  </ol>
 </body>
 </html>
